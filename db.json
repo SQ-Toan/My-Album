@@ -1,0 +1,28 @@
+{
+  "arts": [
+    {
+      "id": "1",
+      "art_address": "https://starwalk.space/gallery/images/what-is-space/1140x641.jpg",
+      "name": "Space",
+      "description": "How much do we know about space? Actually, not as much as we'd like to. Every time you open a stargazing app, you're probably amazed at how many different objects you can find there. But what if we told you that all those planets, stars, and other visible objects represent less than 5% of what is in space?"
+    },
+    {
+      "id": "2",
+      "art_address": "https://t3.ftcdn.net/jpg/01/86/35/50/360_F_186355025_QIDaOSxmPb3qZvmHsdr3IgGv3pzGANuR.jpg",
+      "name": "Mountain",
+      "description": "Gosausee, a beautiful lake with moutains in Salzkammergut, Austria."
+    },
+    {
+      "id": "3",
+      "art_address": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV44RrIp8hqSfm0KylHtGh_FtFYpQm1wLcqw&s",
+      "name": "Cruises, Ice Land",
+      "description": "Iceland is a country known for its natural wonders: glaciers, active volcanoes, black-sand beaches, geothermal areas, roaring rivers, majestic waterfalls, and beautiful lakes. Witness these natural wonders while enjoying fun and unique experiences throughout your Globus Iceland holiday."
+    },
+    {
+      "id": "4",
+      "art_address": "https://aebc975c.rocketcdn.me/wp-content/uploads/2021/01/Palombaggia.jpg",
+      "name": "Palombaggia, France",
+      "description": "In the shade of a pine parasol, it’s so sweet to relax on a beach with entirely Mediterranean charm. Palombaggia is hidden in the south-east of the Isle of Beauty and is a fine sand beach bordering the turquoise waters of the Mediterranean. The pink rocks add a touch of magic to this unrivalled Corsican setting."
+    }
+  ]
+}
