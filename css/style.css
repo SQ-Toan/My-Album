@@ -1,63 +1,86 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
-    font-family: "Poppins",sans-serif;
-    font-size: 62.5%;
+html {
+    font-family: "Poppins", sans-serif;
 }
 
-.container{
-   max-width:calc(1170px - 48px);
-    
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;
+}
+textarea,
+input,
+button,
+label {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: calc(1170px - 48px);
+}
+.btn {
+    padding: 8px 10px;
+    font: bold 1rem/1.71 "Poppins", sans-serif;
+
+    outline: none;
+    border: none;
+    color: #143c3c;
+    background: transparent;
+    border: 1px solid rgba(20, 60, 60, 0.8);
+    border-radius: 16px;
+    cursor: pointer;
 }
 
 /* Arts */
 
-.album{
+.album {
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 24px 0;
-    background: #E2EDDF;
+    background: #e2eddf;
 }
-.album__heading{
+.album__heading {
     text-align: center;
     font-size: 36px;
     font-weight: 600;
     line-height: 1.5;
-    color: #143C3C;
+    color: #143c3c;
 }
-.album__block{
+.album__block {
     display: grid;
+    max-height: 704px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 20px 10px;
     padding: 12px 16px;
-    color: #143C3C;
-    background: rgba(255, 255, 255, .7);
+    color: #143c3c;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     overflow: hidden;
 }
 
-.album__item{
+.album__item {
     margin: 0 auto;
 
     border-radius: 6px;
     overflow: hidden;
 }
-.album__item:hover{
-    box-shadow: 0 4px 20px 0 #5B5B5B40;
+.album__item:hover {
+    box-shadow: 0 4px 20px 0 #5b5b5b40;
     cursor: pointer;
 }
-.album__thumb{
+.album__thumb {
     width: 100%;
     height: 185px;
     overflow: hidden;
 }
-.album__img{
+.album__img {
     width: 100%;
     height: 185px;
     display: block;
@@ -65,28 +88,28 @@ html{
     border-radius: 6px 6px 0 0;
     transition: scale 0.25s ease;
 }
-.album__img:hover{
+.album__img:hover {
     scale: 1.1;
     cursor: zoom-in;
 }
-.album__body{
+.album__body {
     padding: 12px;
     height: 145px;
     background: rgba(213, 213, 213, 0.1);
 }
-.album__name{
+.album__name {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 1.5;
-    color: #143C3C;
+    color: #143c3c;
 }
-.album__description{
+.album__description {
     --line: 3;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.71;
-    color: #7D8188;
+    color: #7d8188;
 
     display: block;
     display: -webkit-box;
@@ -97,40 +120,118 @@ html{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.album__btn{
+.album__btn {
     position: relative;
     margin-top: 20px;
-    padding: 8px 10px;
-    font: bold 1rem/1.71 "Poppins",sans-serif;
-
-    outline: none;
-    border: none;
-    color: rgba(20, 60, 60,1);
-    background: transparent;
-    border: 1px solid rgba(20, 60, 60, .8);
-    border-radius: 16px;
-    cursor: pointer;   
     overflow: hidden;
 }
-.album__btn::before{
+.album__btn::before {
     content: "";
-
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     width: 0;
-    background: rgba(20, 60, 60,.8);
+    background: rgba(20, 60, 60, 0.8);
     transition: width 0.5s ease;
 }
-.album__btn:hover::before{
+.album__btn:hover::before {
     left: 0;
     width: 100%;
- 
 }
 
-/* Model */
+/* Modal */
 
-.model-form{
+.modal {
+    font-family: "Poppins", sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
     display: none;
+}
+.open {
+    display: flex;
+}
+.modal-container {
+    width: 500px;
+    height: 500px;
+    background: #e2eddf;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.modal__header {
+    position: relative;
+}
+.modal__heading {
+    text-align: center;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #143c3c;
+}
+.btn__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #143c3c;
+    border-radius: 50%;
+    color: #143c3c;
+    cursor: pointer;
+}
+.modal__form {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+.modal__form label {
+    font-weight: 400;
+    color: #143c3c;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.modal__input {
+    width: calc(75%);
+    border: none;
+    padding: 8px 10px;
+    color: #143c3c;
+}
+textarea {
+    height: 150px;
+}
+.modal__input:placeholder-shown {
+    opacity: 0.7;
+}
+.modal__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    margin-top: 120px;
+    overflow: hidden;
+}
+.modal__cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background: rgba(20, 60, 60, 0.8);
+    transition: width 0.5s ease;
+}
+.modal__cta:hover::before {
+    left: 0;
+    width: 100%;
 }

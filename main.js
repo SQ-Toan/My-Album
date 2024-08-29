@@ -1,7 +1,10 @@
+
 var artAPI = "http://localhost:3000/arts";
 
 function start(){
     getArts(renderArts);
+
+    handleCreateArts();
 }
 
 start();
@@ -31,5 +34,39 @@ function renderArts(arts){
     }).join('\n');
 
     ulBlock.innerHTML = html;
+}
+
+// CreateArts: tạo thêm danh mục mới
+function handleCreateArts(){
+    const createBtn= document.getElementById("create");
+    
+    createBtn.onclick = function(){
+        const id = document.querySelector('input[name = "id"]').value;
+        const name = document.querySelector('input[name = "name"]').value;
+        const description = document.querySelector('textarea[name = "description"]').value;
+        const art_address = document.querySelector('input[name = "address"]').value;
+
+        let formData = {
+            id,
+            art_address,
+            name,
+            description
+        }
+        
+        createArts(formData, function(){
+            getArts(renderArts);
+        })
+    }
+}
+
+function createArts(formData,callback){
+    let options = {
+        method: "POST",
+        body: JSON.stringify(formData)
+    }
+
+    fetch(artAPI,options)
+        .then(response => response.json())
+        .then(callback)
 }
 

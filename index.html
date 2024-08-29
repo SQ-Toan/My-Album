@@ -1,48 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <title>Arts</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+        <title>Arts</title>
 
-    <!-- CSS -->
-     <link rel="stylesheet" href="./css/style.css">
-    <!-- Reset css -->
-     <link rel="stylesheet" href="./css/reset.css">
-     
-</head>
-<body>
-    <section class="album">
-        <div class="container">
-            <h1 class="album__heading">Arts Album</h1>
-            <ul class="album__block" id="album__block-content">
-            </ul>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- Reset css -->
+        <link rel="stylesheet" href="./css/reset.css" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- icon -->
+        <link rel="stylesheet" href="./icon/themify-icons/themify-icons.css" />
+    </head>
+    <body>
+        <section class="album">
+            <div class="container">
+                <h1 class="album__heading">Arts Album</h1>
+                <ul class="album__block" id="album__block-content"></ul>
+            </div>
+
+            <button
+                class="open-modal album__btn btn"
+                data-text="Thêm danh mục mới"
+            >
+                Thêm danh mục mới
+            </button>
+        </section>
+
+        <div class="modal">
+            <div class="modal-container">
+                <header class="modal__header">
+                    <h1 class="modal__heading">Add New Item</h1>
+                    <i class="ti-close btn__close"></i>
+                </header>
+                <div class="modal__form">
+                    <div class="row">
+                        <label for="id">ID</label>
+                        <input
+                            type="text"
+                            name="id"
+                            id="id"
+                            class="modal__input"
+                            placeholder="ID"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="row">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            class="modal__input"
+                            placeholder="Tiêu đề"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="row">
+                        <label for="description">Description</label>
+                        <textarea
+                            name="description"
+                            id="description"
+                            style="resize: none"
+                            class="modal__input"
+                            placeholder="Nhập nội dung..."
+                            autocomplete="off"
+                        ></textarea>
+                    </div>
+
+                    <div class="row">
+                        <label for="address">Address(URL)</label>
+                        <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            class="modal__input"
+                            placeholder="Địa chỉ URL"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <button id="create" class="modal__cta btn">Thêm</button>
+                </div>
+            </div>
         </div>
-
-        <button class="open-model album__btn">Thêm danh mục mới</button>
-    </section>
-
-    <form action="" class="model-form">
-        <div>
-            <label for="id">ID</label>
-            <input type="text" name="id">
-        </div>
-
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name">
-        </div>
-
-        <div>
-            <label for="description">Description</label>
-            <input type="text" name="description">
-        </div>
-
-        <div>
-            <label for="address">Address</label>
-            <input type="text" name="address">
-        </div>
-    </form>
-    <script src="./main.js"></script>
-</body>
+        <script src="./main.js"></script>
+        <script src="./modal.js"></script>
+    </body>
 </html>
