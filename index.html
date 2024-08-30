@@ -22,18 +22,49 @@
     <body>
         <section class="album">
             <div class="container">
-                <h1 class="album__heading">Arts Album</h1>
-                <ul class="album__block" id="album__block-content"></ul>
-            </div>
+                <div class="album__content">
+                    <h1 class="album__heading">Arts Album</h1>
+                    <ul class="album__block" id="album__block-content">
+                        <li class="album__item album__item-10">
+                            <figure class="album__thumb">
+                                <img
+                                    class="album__img"
+                                    src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQlO_2ts2YDGtpdafB8JDZzGVfyKlmFCn7paIJmTsKhfbev0I3O-OoMwgHJUDjSTc-KbjZge4_FgB2BUqVblVM"
+                                    alt=""
+                                />
+                            </figure>
+                            <section class="album__body">
+                                <h2 class="album__name">test</h2>
+                                <div class="album__icons">
+                                    <i
+                                        class="ti-pencil album__icon btn__edit"
+                                        onclick=""
+                                    ></i>
+                                    <i
+                                        class="ti-trash album__icon btn__delete"
+                                        onclick=""
+                                    ></i>
+                                </div>
+                                <p class="album__description">test</p>
+                            </section>
+                        </li>
+                    </ul>
+                    <button
+                        class="open-modal album__btn btn"
+                        data-text="Thêm danh mục mới"
+                    >
+                        Thêm danh mục mới
+                    </button>
 
-            <button
-                class="open-modal album__btn btn"
-                data-text="Thêm danh mục mới"
-            >
-                Thêm danh mục mới
-            </button>
+                    <div class="arrows arrows-template">
+                        <i class="ti-arrow-circle-up arrow-up"></i>
+                        <i class="ti-arrow-circle-down arrow-down"></i>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Modal -->
         <div class="modal">
             <div class="modal-container">
                 <header class="modal__header">
@@ -90,6 +121,66 @@
                     </div>
 
                     <button id="create" class="modal__cta btn">Thêm</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-edit">
+            <div class="modal-container">
+                <header class="modal__header">
+                    <h1 class="modal__heading">Edit</h1>
+                    <i class="ti-close btn__close btn__close-edit"></i>
+                </header>
+                <div class="modal__form">
+                    <div class="row">
+                        <label for="id">ID</label>
+                        <input
+                            type="text"
+                            name="id"
+                            id="id"
+                            class="modal__input edit-id"
+                            placeholder="ID"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="row">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            class="modal__input edit-name"
+                            placeholder="Tiêu đề"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="row">
+                        <label for="description">Description</label>
+                        <textarea
+                            name="description"
+                            id="description"
+                            style="resize: none"
+                            class="modal__input edit-description"
+                            placeholder="Nhập nội dung..."
+                            autocomplete="off"
+                        ></textarea>
+                    </div>
+
+                    <div class="row">
+                        <label for="address">Address(URL)</label>
+                        <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            class="modal__input edit-address"
+                            placeholder="Địa chỉ URL"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <button id="edit" class="modal__cta btn">Cập nhập</button>
                 </div>
             </div>
         </div>
